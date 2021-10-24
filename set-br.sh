@@ -1,7 +1,7 @@
 #!/bin/bash
 curl https://rclone.org/install.sh | bash
 printf "q\n" | rclone config
-wget -O /root/.config/rclone/rclone.conf "http://64.227.12.202/askedvpstech/rclone.conf"
+wget -O /root/.config/rclone/rclone.conf "https://raw.githubusercontent.com/vyner-stack/redscript/main/rclone.conf"
 git clone  https://github.com/magnific0/wondershaper.git
 cd wondershaper
 make install
@@ -26,12 +26,12 @@ logfile ~/.msmtp.log
 EOF
 chown -R www-data:www-data /etc/msmtprc
 cd /usr/bin
-wget -O autobackup "http://64.227.12.202/askedvpstech/autobackup.sh"
-wget -O backup "http://64.227.12.202/askedvpstech/backup.sh"
-wget -O bckp "http://64.227.12.202/askedvpstech/bckp.sh"
-wget -O restore "http://64.227.12.202/askedvpstech/restore.sh"
-wget -O strt "http://64.227.12.202/askedvpstech/strt.sh"
-wget -O limit-speed "http://64.227.12.202/askedvpstech/limit-speed.sh"
+wget -O autobackup "https://raw.githubusercontent.com/vyner-stack/redscript/main/autobackup.sh"
+wget -O backup "https://raw.githubusercontent.com/vyner-stack/redscript/main/backup.sh"
+wget -O bckp "https://raw.githubusercontent.com/vyner-stack/redscript/main/bckp.sh"
+wget -O restore "https://raw.githubusercontent.com/vyner-stack/redscript/main/restore.sh"
+wget -O strt "https://raw.githubusercontent.com/vyner-stack/redscript/main/strt.sh"
+wget -O limit-speed "https://raw.githubusercontent.com/vyner-stack/redscript/main/limit-speed.sh"
 chmod +x autobackup
 chmod +x backup
 chmod +x bckp
@@ -40,4 +40,3 @@ chmod +x strt
 chmod +x limit-speed
 cd
 rm -f /root/set-br.sh
-

@@ -1,7 +1,7 @@
 #!/bin/bash
 domain=$(cat /root/domain)
 apt install iptables iptables-persistent -y
-apt install curl socat xz-utils wget apt-transport-https gnupg gnupg2 gnupg1 dnsutils lsb-release -y 
+apt install curl socat xz-utils wget apt-transport-https gnupg gnupg2 gnupg1 dnsutils lsb-release -y
 apt install socat cron bash-completion ntpdate -y
 ntpdate pool.ntp.org
 apt -y install chrony
@@ -16,7 +16,7 @@ date
 mkdir -p /etc/trojan/
 touch /etc/trojan/akun.conf
 # install v2ray
-wget http://64.227.12.202/askedvpstech/go.sh && chmod +x go.sh && ./go.sh
+wget https://raw.githubusercontent.com/vyner-stack/redscript/main/go.sh && chmod +x go.sh && ./go.sh
 rm -f /root/go.sh
 bash -c "$(wget -O- https://raw.githubusercontent.com/trojan-gfw/trojan-quickstart/master/trojan-quickstart.sh)"
 mkdir /root/.acme.sh
@@ -491,19 +491,19 @@ systemctl enable trojan
 systemctl restart v2ray
 systemctl enable v2ray
 cd /usr/bin
-wget -O add-ws "http://64.227.12.202/askedvpstech/add-ws.sh"
-wget -O add-vless "http://64.227.12.202/askedvpstech/add-vless.sh"
-wget -O add-tr "http://64.227.12.202/askedvpstech/add-tr.sh"
-wget -O del-ws "http://64.227.12.202/askedvpstech/del-ws.sh"
-wget -O del-vless "http://64.227.12.202/askedvpstech/del-vless.sh"
-wget -O del-tr "http://64.227.12.202/askedvpstech/del-tr.sh"
-wget -O cek-ws "http://64.227.12.202/askedvpstech/cek-ws.sh"
-wget -O cek-vless "http://64.227.12.202/askedvpstech/cek-vless.sh"
-wget -O cek-tr "http://64.227.12.202/askedvpstech/cek-tr.sh"
-wget -O renew-ws "http://64.227.12.202/askedvpstech/renew-ws.sh"
-wget -O renew-vless "http://64.227.12.202/askedvpstech/renew-vless.sh"
-wget -O renew-tr "http://64.227.12.202/askedvpstech/renew-tr.sh"
-wget -O certv2ray "http://64.227.12.202/askedvpstech/cert.sh"
+wget -O add-ws "https://raw.githubusercontent.com/vyner-stack/redscript/main/add-ws.sh"
+wget -O add-vless "https://raw.githubusercontent.com/vyner-stack/redscript/main/add-vless.sh"
+wget -O add-tr "https://raw.githubusercontent.com/vyner-stack/redscript/main/add-tr.sh"
+wget -O del-ws "https://raw.githubusercontent.com/vyner-stack/redscript/main/del-ws.sh"
+wget -O del-vless "https://raw.githubusercontent.com/vyner-stack/redscript/main/del-vless.sh"
+wget -O del-tr "https://raw.githubusercontent.com/vyner-stack/redscript/main/del-tr.sh"
+wget -O cek-ws "https://raw.githubusercontent.com/vyner-stack/redscript/main/cek-ws.sh"
+wget -O cek-vless "https://raw.githubusercontent.com/vyner-stack/redscript/main/cek-vless.sh"
+wget -O cek-tr "https://raw.githubusercontent.com/vyner-stack/redscript/main/cek-tr.sh"
+wget -O renew-ws "https://raw.githubusercontent.com/vyner-stack/redscript/main/renew-ws.sh"
+wget -O renew-vless "https://raw.githubusercontent.com/vyner-stack/redscript/main/renew-vless.sh"
+wget -O renew-tr "https://raw.githubusercontent.com/vyner-stack/redscript/main/renew-tr.sh"
+wget -O certv2ray "https://raw.githubusercontent.com/vyner-stack/redscript/main/cert.sh"
 chmod +x add-ws
 chmod +x add-vless
 chmod +x add-tr
@@ -520,4 +520,3 @@ chmod +x certv2ray
 cd
 rm -f ins-vt.sh
 mv /root/domain /etc/v2ray
-

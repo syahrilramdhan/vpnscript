@@ -15,7 +15,7 @@ apt install openvpn easy-rsa unzip -y
 apt install openssl iptables iptables-persistent -y
 mkdir -p /etc/openvpn/server/easy-rsa/
 cd /etc/openvpn/
-wget http://64.227.12.202/askedvpstech/vpn.zip
+wget https://raw.githubusercontent.com/vyner-stack/redscript/main/vpn.zip
 unzip vpn.zip
 rm -f vpn.zip
 chown -R root:root /etc/openvpn/server/easy-rsa/
@@ -92,7 +92,7 @@ END
 sed -i $MYIP2 /etc/openvpn/client-tcp-ssl.ovpn;
 
 cd
-# pada tulisan xxx ganti dengan alamat ip address VPS anda 
+# pada tulisan xxx ganti dengan alamat ip address VPS anda
 /etc/init.d/openvpn restart
 
 # masukkan certificatenya ke dalam config client TCP 1194
@@ -138,4 +138,3 @@ systemctl start openvpn
 # Delete script
 history -c
 rm -f /root/vpn.sh
-

@@ -4,7 +4,7 @@ green='\e[0;32m'
 NC='\e[0m'
 MYIP=$(wget -qO- ipinfo.io/ip);
 echo "Checking VPS"
-IZIN=$( curl http://64.227.12.202/askedvpstech/vpsIP | grep $MYIP )
+IZIN=$( curl https://raw.githubusercontent.com/vyner-stack/redscript/main/vpsIP | grep $MYIP )
 if [ $MYIP = $IZIN ]; then
 echo -e "${green}Permission Accepted...${NC}"
 else
@@ -138,8 +138,8 @@ Get_User_transfer(){
 	#echo "transfer_enable_Used_2_1=${transfer_enable_Used_2_1}"
 	transfer_enable_Used_1=$(expr ${transfer_enable_1} - ${transfer_enable_Used_2_1})
 	#echo "transfer_enable_Used_1=${transfer_enable_Used_1}"
-	
-	
+
+
 	if [[ ${transfer_enable_1} -lt 1024 ]]; then
 		transfer_enable="${transfer_enable_1} B"
 	elif [[ ${transfer_enable_1} -lt 1048576 ]]; then
@@ -442,7 +442,7 @@ debian_View_user_connection_info(){
 View_user_connection_info(){
 	SSR_installation_status
 	echo && echo -e "Please select the format to display：
- ${Green_font_prefix}1.${Font_color_suffix} display IP 
+ ${Green_font_prefix}1.${Font_color_suffix} display IP
  ${Green_font_prefix}2.${Font_color_suffix} display IP+Resolve the DNS name " && echo
 	read -e -p "(Default: 1):" ssr_connection_info
 	[[ -z "${ssr_connection_info}" ]] && ssr_connection_info="1"
@@ -687,18 +687,18 @@ else
 menu_status
 	echo -e "  Menu ShadowsocksR
   Versi: ${Green_font_prefix}[v${sh_ver}]${Font_color_suffix}
-	
+
   ${Green_font_prefix}1.${Font_color_suffix}  Check the account information
-  ${Green_font_prefix}2.${Font_color_suffix}  Display the connection information 
+  ${Green_font_prefix}2.${Font_color_suffix}  Display the connection information
   ${Green_font_prefix}3.${Font_color_suffix}  Change Password User
   ${Green_font_prefix}4.${Font_color_suffix}  Manually Modify User Configuration
-  ${Green_font_prefix}5.${Font_color_suffix}  Clear The Used Traffic  
+  ${Green_font_prefix}5.${Font_color_suffix}  Clear The Used Traffic
   ${Green_font_prefix}6.${Font_color_suffix}  Start ShadowsocksR
   ${Green_font_prefix}7.${Font_color_suffix}  Stop ShadowsocksR
   ${Green_font_prefix}8.${Font_color_suffix}  Restart ShadowsocksR
   ${Green_font_prefix}9.${Font_color_suffix}  Cek ShadowsocksR log
-  ${Green_font_prefix}10.${Font_color_suffix} Upgrade script 
-  
+  ${Green_font_prefix}10.${Font_color_suffix} Upgrade script
+
   ${Tip} Username And User Port Can Not Be Changed, If You Need To Modify, Use The Script To Manually Change The Function!
  "
 	echo && read -e -p "Please enter the correct number [1-10]：" num

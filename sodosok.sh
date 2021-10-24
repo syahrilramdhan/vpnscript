@@ -39,7 +39,7 @@ echo "#############################################"
 echo "#############################################"
 echo "Konfigurasi Server."
 cat > /etc/shadowsocks-libev/config.json <<END
-{   
+{
     "server":"0.0.0.0",
     "server_port":8488,
     "password":"tes",
@@ -88,10 +88,10 @@ iptables -I INPUT -m state --state NEW -m udp -p udp --dport 2443:3543 -j ACCEPT
 iptables-save > /etc/iptables.up.rules
 ip6tables-save > /etc/ip6tables.up.rules
 cd /usr/bin
-wget -O add-ss "http://64.227.12.202/askedvpstech/add-ss.sh"
-wget -O del-ss "http://64.227.12.202/askedvpstech/del-ss.sh"
-wget -O cek-ss "http://64.227.12.202/askedvpstech/cek-ss.sh"
-wget -O renew-ss "http://64.227.12.202/askedvpstech/renew-ss.sh"
+wget -O add-ss "https://raw.githubusercontent.com/vyner-stack/redscript/main/add-ss.sh"
+wget -O del-ss "https://raw.githubusercontent.com/vyner-stack/redscript/main/del-ss.sh"
+wget -O cek-ss "https://raw.githubusercontent.com/vyner-stack/redscript/main/cek-ss.sh"
+wget -O renew-ss "https://raw.githubusercontent.com/vyner-stack/redscript/main/renew-ss.sh"
 chmod +x add-ss
 chmod +x del-ss
 chmod +x cek-ss

@@ -1,7 +1,7 @@
 #!/bin/bash
 # Debian 9 & 10 64bit
 # Ubuntu 18.04 & 20.04 bit
-# Centos 7 & 8 64bit 
+# Centos 7 & 8 64bit
 # By Horasss
 # ==================================================
 
@@ -89,10 +89,10 @@ WG_RUNNING=$?
 
 # Tambahan
 cd /usr/bin
-wget -O add-wg "http://64.227.12.202/askedvpstech/add-wg.sh"
-wget -O del-wg "http://64.227.12.202/askedvpstech/del-wg.sh"
-wget -O cek-wg "http://64.227.12.202/askedvpstech/cek-wg.sh"
-wget -O renew-wg "http://64.227.12.202/askedvpstech/renew-wg.sh"
+wget -O add-wg "https://raw.githubusercontent.com/vyner-stack/redscript/main/add-wg.sh"
+wget -O del-wg "https://raw.githubusercontent.com/vyner-stack/redscript/main/del-wg.sh"
+wget -O cek-wg "https://raw.githubusercontent.com/vyner-stack/redscript/main/cek-wg.sh"
+wget -O renew-wg "https://raw.githubusercontent.com/vyner-stack/redscript/main/renew-wg.sh"
 chmod +x add-wg
 chmod +x del-wg
 chmod +x cek-wg

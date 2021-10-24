@@ -11,7 +11,7 @@ red='\e[1;31m'
 green='\e[0;32m'
 NC='\e[0m'
 MYIP=$(wget -qO- ifconfig.co);
-IZIN=$( curl http://64.227.12.202/askedvpstech/vpsIP | grep $MYIP )
+IZIN=$( curl https://raw.githubusercontent.com/vyner-stack/redscript/main/vpsIP | grep $MYIP )
 if [ $MYIP = $IZIN ]; then
 echo -e "${green}Permission Accepted...${NC}"
 else
@@ -29,25 +29,25 @@ exit 0
 fi
 echo "Start Update"
 cd /usr/bin
-wget -O menu "http://64.227.12.202/askedvpstech/menu.sh"
-wget -O usernew "http://64.227.12.202/askedvpstech/usernew.sh"
-wget -O trial "http://64.227.12.202/askedvpstech/trial.sh"
-wget -O change-port "http://64.227.12.202/askedvpstech/change.sh"
-wget -O port-ovpn "http://64.227.12.202/askedvpstech/port-ovpn.sh"
-wget -O port-ssl "http://64.227.12.202/askedvpstech/port-ssl.sh"
-wget -O port-wg "http://64.227.12.202/askedvpstech/port-wg.sh"
-wget -O port-tr "http://64.227.12.202/askedvpstech/port-tr.sh"
-wget -O port-sstp "http://64.227.12.202/askedvpstech/port-sstp.sh"
-wget -O port-squid "http://64.227.12.202/askedvpstech/port-squid.sh"
-wget -O port-ws "http://64.227.12.202/askedvpstech/port-ws.sh"
-wget -O port-vless "http://64.227.12.202/askedvpstech/port-vless.sh"
-wget -O wbmn "http://64.227.12.202/askedvpstech/webmin.sh"
-wget -O xp "http://64.227.12.202/askedvpstech/xp.sh"
-wget -O limit-speed "http://64.227.12.202/askedvpstech/limit-speed.sh"
-wget -O add-sstp "http://64.227.12.202/askedvpstech/add-sstp.sh"
-wget -O add-ws "http://64.227.12.202/askedvpstech/add-ws.sh"
-wget -O add-vless "http://64.227.12.202/askedvpstech/add-vless.sh"
-wget -O add-tr "http://64.227.12.202/askedvpstech/add-tr.sh"
+wget -O menu "https://raw.githubusercontent.com/vyner-stack/redscript/main/menu.sh"
+wget -O usernew "https://raw.githubusercontent.com/vyner-stack/redscript/main/usernew.sh"
+wget -O trial "https://raw.githubusercontent.com/vyner-stack/redscript/main/trial.sh"
+wget -O change-port "https://raw.githubusercontent.com/vyner-stack/redscript/main/change.sh"
+wget -O port-ovpn "https://raw.githubusercontent.com/vyner-stack/redscript/main/port-ovpn.sh"
+wget -O port-ssl "https://raw.githubusercontent.com/vyner-stack/redscript/main/port-ssl.sh"
+wget -O port-wg "https://raw.githubusercontent.com/vyner-stack/redscript/main/port-wg.sh"
+wget -O port-tr "https://raw.githubusercontent.com/vyner-stack/redscript/main/port-tr.sh"
+wget -O port-sstp "https://raw.githubusercontent.com/vyner-stack/redscript/main/port-sstp.sh"
+wget -O port-squid "https://raw.githubusercontent.com/vyner-stack/redscript/main/port-squid.sh"
+wget -O port-ws "https://raw.githubusercontent.com/vyner-stack/redscript/main/port-ws.sh"
+wget -O port-vless "https://raw.githubusercontent.com/vyner-stack/redscript/main/port-vless.sh"
+wget -O wbmn "https://raw.githubusercontent.com/vyner-stack/redscript/main/webmin.sh"
+wget -O xp "https://raw.githubusercontent.com/vyner-stack/redscript/main/xp.sh"
+wget -O limit-speed "https://raw.githubusercontent.com/vyner-stack/redscript/main/limit-speed.sh"
+wget -O add-sstp "https://raw.githubusercontent.com/vyner-stack/redscript/main/add-sstp.sh"
+wget -O add-ws "https://raw.githubusercontent.com/vyner-stack/redscript/main/add-ws.sh"
+wget -O add-vless "https://raw.githubusercontent.com/vyner-stack/redscript/main/add-vless.sh"
+wget -O add-tr "https://raw.githubusercontent.com/vyner-stack/redscript/main/add-tr.sh"
 chmod +x change-port
 chmod +x port-ovpn
 chmod +x port-ssl

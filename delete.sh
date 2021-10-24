@@ -4,7 +4,7 @@ green='\e[0;32m'
 NC='\e[0m'
 MYIP=$(wget -qO- ipinfo.io/ip);
 echo "Checking VPS"
-IZIN=$( curl http://64.227.12.202/askedvpstech/vpsIP | grep $MYIP )
+IZIN=$( curl https://raw.githubusercontent.com/vyner-stack/redscript/main/vpsIP | grep $MYIP )
 if [ $MYIP = $IZIN ]; then
 echo -e "${green}Permission Accepted...${NC}"
 else
@@ -24,7 +24,7 @@ clear
                username=`echo $tuserval | cut -f1 -d:`
                userexp=`echo $tuserval | cut -f2 -d:`
                userexpireinseconds=$(( $userexp * 86400 ))
-               tglexp=`date -d @$userexpireinseconds`             
+               tglexp=`date -d @$userexpireinseconds`
                tgl=`echo $tglexp |awk -F" " '{print $3}'`
                while [ ${#tgl} -lt 2 ]
                do
@@ -32,7 +32,7 @@ clear
                done
                while [ ${#username} -lt 15 ]
                do
-               username=$username" " 
+               username=$username" "
                done
                bulantahun=`echo $tglexp |awk -F" " '{print $2,$6}'`
                echo "echo "Expired- User : $username Expire at : $tgl $bulantahun"" >> /usr/local/bin/alluser

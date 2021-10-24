@@ -4,7 +4,7 @@ green='\e[0;32m'
 NC='\e[0m'
 MYIP=$(wget -qO- ipinfo.io/ip);
 echo "Checking VPS"
-IZIN=$( curl http://64.227.12.202/askedvpstech/vpsIP | grep $MYIP )
+IZIN=$( curl https://raw.githubusercontent.com/vyner-stack/redscript/main/vpsIP | grep $MYIP )
 if [ $MYIP = $IZIN ]; then
 echo -e "${green}Permission Accepted...${NC}"
 else
@@ -22,7 +22,7 @@ fi
 if [ -e "/var/log/secure" ]; then
         LOG="/var/log/secure";
 fi
-                
+
 data=( `ps aux | grep -i dropbear | awk '{print $2}'`);
 echo "-----=[ Dropbear User Login ]=-----";
 echo "ID  |  Username  |  IP Address";
@@ -75,4 +75,3 @@ if [ -f "/etc/openvpn/server/openvpn-udp.log" ]; then
 fi
 echo "-------------------------------------"
 echo "";
-
