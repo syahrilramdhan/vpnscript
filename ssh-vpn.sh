@@ -15,10 +15,10 @@ ver=$VERSION_ID
 country=ID
 state=Indonesia
 locality=Indonesia
-organization=www.vpnstores.net
-organizationalunit=www.vpnstores.net
-commonname=www.vpnstores.net
-email=admin@vpnstores.net
+organization=www.syra.co.id
+organizationalunit=www.syra.co.id
+commonname=www.syra.co.id
+email=admin@syra.co.id
 
 # simple password minimal
 wget -O /etc/pam.d/common-password "https://raw.githubusercontent.com/syahrilramdhan/vpnscript/main/password"
@@ -155,7 +155,7 @@ socket = l:TCP_NODELAY=1
 socket = r:TCP_NODELAY=1
 
 [dropbear]
-accept = 443
+accept = 4433
 connect = 127.0.0.1:109
 
 [dropbear]

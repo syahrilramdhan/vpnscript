@@ -5,11 +5,11 @@ NC='\e[0m'
 MYIP=$(wget -qO- ipinfo.io/ip);
 echo "Checking VPS"
 apt install jq curl -y
-DOMAIN=kekburuk.my.id
+DOMAIN=syra.co.id
 sub=$(</dev/urandom tr -dc a-z0-9 | head -c4)
-SUB_DOMAIN=${sub}.kekburuk.my.id
-CF_ID=sharawiasked@gmail.com
-CF_KEY=22aaf6d5b6c3a5392c8cd5ac65a2066daab62
+SUB_DOMAIN=${sub}.syra.co.id
+CF_ID=syra.channel.id@gmail.com
+CF_KEY=3e7a0cb6e4dd917544c1ae4ba7aecd0d32b9b
 set -euo pipefail
 IP=$(wget -qO- ipinfo.io/ip);
 echo "Updating DNS for ${SUB_DOMAIN}..."
